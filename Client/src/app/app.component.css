@@ -1,0 +1,27 @@
+nav button {
+    padding: 5px 30px;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-left: 5px;
+    display: inline-block;
+    background-color: #333;
+    border-radius: 4px;
+    color: #fff;
+    font-family: Helvetica;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in 0s;
+  }
+  
+  
+  nav button:hover {
+    color: #333;
+    text-transform: uppercase;
+    background-color: #CFD8DC;
+    letter-spacing: 3px;
+    transition: all 0.3s ease-in 0s;
+    font-weight: 600;
+  }
+  
+  
+  

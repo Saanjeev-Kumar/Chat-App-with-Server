@@ -1,0 +1,66 @@
+
+.example-full-width {
+  width: 600px;
+}
+.group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  background-color: deepskyblue;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 18px;
+  padding: 3px 20px;
+  transition: all 0.3s ease 0s;
+}
+button:hover {
+  letter-spacing: 3px;
+
+  transition: all 0.3s ease 0s;
+}
+#join:hover {
+  background-color: green;
+}
+#leave:hover {
+  background-color: red;
+}
+
+#formField{
+  width: 800px;
+  
+}
+.msg{
+ text-align: center;
+}
+.textMsg
+{
+  margin: 10px;
+}
+#sendBtn{
+  margin-left: 10px;
+
+}
+#sendBtn:hover{
+  cursor: pointer;
+  
+ 
+}
+.boxx{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.scrollText{
+  margin-top: 20px;
+  height: 550px;
+  width: 800px;
+  overflow-y: scroll;
+}
+.well{
+  width: 300px;
+}

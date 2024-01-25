@@ -1,0 +1,52 @@
+.card{
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    box-shadow: 	0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+  				0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+   #formField{
+     width: 600px;
+   }
+   @media screen and (min-width:400px )and (max-width:1000px) {
+    #formField{
+      width: 400px;
+    }
+   }
+  h3{
+    color:lightcoral;
+    font-size: 22px;
+  }
+  #exit{
+    width: 100px;
+  
+  }
+
+  .card-body{
+    padding: 50px 0px;
+    text-align: center;
+  }
+  
+  #submit{
+    width: 100px;
+  }
+  .card-header{
+    background-color:deepskyblue;
+  }
+  mat-radio-button{
+    padding: 5px;
+  }
+  button{
+    background-color: deepskyblue;
+    color:#fff;
+    letter-spacing: 1px;
+    font-size: 18px;
+    padding: 3px 20px;
+    transition: all 0.3s ease 0s;
+  }
+  button:hover{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background-color: darkcyan;
+    transition: all 0.3s ease 0s;
+  }

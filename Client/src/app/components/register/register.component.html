@@ -1,0 +1,117 @@
+<div style="margin-top: 30px;" class="row">
+    <div class="col-sm-10 col-md-8 offset-sm-1 offset-md-2">
+    <div class="card">
+      <div class="card-header text-center"><h2>Register Here</h2></div>
+      <div class="card-body text-center">
+        <div>
+          <form [formGroup]="registerForm" class="example-form" >
+            <mat-form-field id="formField" appearance="outline" class="example-full-width">
+                <mat-label>Enter Full Name</mat-label>
+                <input name="fullName" matInput [formControl]="fullName">
+                <mat-error *ngIf="fullName.hasError('required')">Name is required</mat-error>
+                <mat-error *ngIf="fullName.hasError('minlength')">Atleast 3 letters</mat-error>
+                <mat-error *ngIf="fullName.hasError('pattern')">Enter Full-Middle-Last Name</mat-error>
+            </mat-form-field><br>
+            <mat-form-field id="formField" appearance="outline" class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input type="email" name="username" matInput [formControl]="username"
+                    placeholder="Ex. abc@example.com" />
+                <mat-error *ngIf="username.hasError('required')">
+                    Email is <strong>required</strong>
+                </mat-error>
+                <mat-error *ngIf="username.hasError('email')">
+                    Please enter a valid email address
+                </mat-error>
+            </mat-form-field><br>
+            <mat-form-field id="formField" class="full-width" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input [formControl]="password" type="password" matInput required />
+                <mat-error *ngIf="password.hasError('required')">
+                    Password is <strong>required</strong>
+                </mat-error>
+                <mat-error *ngIf="password.hasError('pattern')">Password should contain one Uppercase, one LowerCase, one Symbol and a Number.</mat-error>
+            </mat-form-field><br>
+            <mat-radio-group [formControl]="gender" aria-label="Select an option">
+              <mat-radio-button value="Male">Male</mat-radio-button>
+              <mat-radio-button value="Female">Female</mat-radio-button>
+              <mat-radio-button value="Other">Other</mat-radio-button>
+            </mat-radio-group><br><br>
+            <p id="successMsg" *ngIf="bool" style="color:green;">Successfully Registered </p>
+            <button mat-raised-button (click)="register();">Submit</button><br>
+  
+  
+
+
+
+
+
+
+
+<!-- <div class="row">
+    <div class="col-sm-10 col-md-8 offset-sm-1 offset-md-2">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="text-center">Registration Form</h3>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="registerForm">
+                    <div>
+                        <mat-form-field id="select" appearance="outline">
+                            <mat-label>Enter Full Name</mat-label>
+                            <input name="fullName" matInput [formControl]="fullName">
+                            <mat-error *ngIf="fullName.hasError('required')">Name is required</mat-error>
+                            <mat-error *ngIf="fullName.hasError('minlength')">Atleast 3 letters</mat-error>
+                            <mat-error *ngIf="fullName.hasError('pattern')">Enter Full-Middle-Last Name</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field id="formField" appearance="outline" class="example-full-width">
+                            <mat-label>Username</mat-label>
+                            <input type="email" name="username" matInput [formControl]="username"
+                                placeholder="Ex. abc@example.com" />
+                            <mat-error *ngIf="username.hasError('required')">
+                                Email is <strong>required</strong>
+                            </mat-error>
+                            <mat-error *ngIf="username.hasError('email')">
+                                Please enter a valid email address
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field id="formField" appearance="outline" class="example-full-width">
+                            <mat-label>Password</mat-label>
+                            <input matInput [formControl]="password" name="password" placeholder="Enter password..." />
+                            <mat-error *ngIf="password.hasError('required')">
+                                Password must be <strong>required</strong>
+                            </mat-error>
+                            <mat-error *ngIf="password.hasError('minlength')">
+                                password should be minimum 6 chararacter
+                            </mat-error>
+                            <mat-error *ngIf="password.hasError('pattern')">
+                                Password should be 1 lower case,1 capital leter,1 special character.
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-label>Gender</mat-label>
+                        <mat-radio-group [formControl]="gender" aria-label="Select an option">
+                            <mat-radio-button value="Male">Male</mat-radio-button>
+                            <mat-radio-button value="Female">Female</mat-radio-button>
+                            <mat-radio-button value="Other">Other</mat-radio-button>
+                        </mat-radio-group><br><br>
+                    </div>
+                    <div class="form-group text-center">
+                        <div>
+                            <p id="successMessage" style="display: none; color: green;">Hospital Details Succesfully
+                                Registered</p>
+                            <button mat-raised-button color="primary" id="submit"
+                                [disabled]="registerForm.invalid">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->

@@ -1,0 +1,25 @@
+<div style="margin-top: 30px;" class="row">
+    <div class="col-sm-10 col-md-8 offset-sm-1 offset-md-2">
+        <div class="card">
+            <div class="card-header text-center">
+                <h1>Login Here</h1>
+            </div>
+            <div class="card-body text-center">
+                <div>
+                    <form [formGroup]="loginForm" class="example-form">
+                        <mat-form-field id="formField" class="example-full-width" appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input type="email" matInput [formControl]="email">
+                            <mat-error *ngIf="email.hasError('required')">Email is required</mat-error>
+                        </mat-form-field><br>
+                        <mat-form-field id="formField" class="full-width" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input [formControl]="password" type="password" matInput required />
+                            <mat-error *ngIf="password.hasError('required')">Password is required</mat-error>
+                        </mat-form-field><br>
+                        <p id="successMsg" *ngIf="bool" style="color:green;">Successfully Logged In </p>
+                        <button mat-raised-button (click) = "login()">Submit</button><br>
+                    </form>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/TeamChallenge",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

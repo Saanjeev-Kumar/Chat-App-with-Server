@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <div class="text-center py-2">
+        <h2>MEAN MONKS Chat Room</h2>
+        <hr>
+    </div>
+    <div class="group">
+       <div>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Choose Group</mat-label>
+                <mat-select [(ngModel)]="room" name="roomInput">
+                    <mat-option value="Mean Monks">Mean Monks </mat-option>
+                    <mat-option value="Angular Achievers">Angular Achievers </mat-option>
+                    <mat-option value="Runtime Terrors">Runtime Terrors </mat-option>
+                    <mat-option value="Callback Coders">Callback Coders </mat-option>
+                </mat-select>
+            </mat-form-field>
+         
+        </div>
+       
+            <div style="margin-top:19px;" class="pull-right">
+                <button id="join" mat-raised-button (click)="join()">Join</button>
+                <button id="leave" mat-raised-button (click)="leave()">Leave</button>
+            </div>
+        
+    </div>
+    <div class="boxx">
+        <div class="scrollText">
+         <div class="well">
+                <div *ngFor="let item of messageArray">
+                   <span style="width: 750px;"><strong>{{item.user}} : </strong> {{item.message}}</span>
+                </div>
+        </div>
+    </div>
+        <div class="textMsg">
+            <mat-form-field id="formField" class="example-full-width">
+                <mat-label>Message</mat-label>
+                <input matInput [(ngModel)]="messageText">
+            </mat-form-field>
+            <!-- <button id="sendBtn" mat-raised-button (click)="sendMessage()">Send</button> -->
+            <mat-icon *ngIf="bool" aria-hidden="false" id="sendBtn" aria-label="Example send icon" (click)="sendMessage()">send</mat-icon>
+            <!-- <input matInput type="text" [(ngModel)]="messageText"> -->
+        </div>
+    </div>
+</div>
